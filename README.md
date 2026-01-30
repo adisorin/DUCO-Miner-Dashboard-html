@@ -12,13 +12,13 @@ If you like this and would like to donate some DUCO to him, his wallet username 
 # În limba Română:
 1. Prezentare Generală
 Codul furnizat este o aplicație Single-Page (SPA) construită în HTML5, CSS3 și JavaScript (Vanilla JS). Acesta interfațează cu API-ul public Duino-Coin pentru a afișa statistici despre balanță, starea minerilor și performanța rețelei.
-2. Caracteristici Principale
-3. Monitorizare în timp real: Actualizare automată la fiecare 60 de secunde.
+3. Caracteristici Principale
+4. Monitorizare în timp real: Actualizare automată la fiecare 60 de secunde.
 Sumar Cont: Afișează balanța totală, numărul de mineri activi, uptime-ul sesiunii și scorul de încredere (Trust Score).
 Detalii Mineri: Tabel detaliat cu ID-ul fiecărui dispozitiv, software-ul folosit, algoritmul, rata de acceptare a share-urilor, hashrate și latență (ping).
 Interfață Dark Mode: Design optimizat pentru lizibilitate, folosind fonturi monospace și coduri de culori pentru alerte.
  
-4. Structură Tehnică
+5. Structură Tehnică
 A. Stilul Vizual (CSS)
 Aplicația utilizează o temă întunecată (#111) cu accente de culori funcționale:
 Verde: Valori pozitive, succes, latență mică.
@@ -30,19 +30,19 @@ fetchData(): Funcția principală asincronă care interoghează REST API-ul Duin
 formatHashrate(hr): Convertește valoarea brută din H/s în unități mai mari (kH/s, mH/s) pentru lizibilitate.
 sec2hms(sec): Calculează timpul de rulare al dashboard-ului în format HH:MM:SS.
 startCountdown(): Gestionează cronometrul de reîmprospătare și declanșează noua cerere de date.
-5. Parametrii Monitorizați în Tabel
+6. Parametrii Monitorizați în Tabel
 Coloană	Descriere
 ID	Identificatorul setat în configurarea minerului.
 Success	Raportul dintre share-urile acceptate și totalul procesat.
 Hashrate	Viteza de calcul a dispozitivului.
 Diff	Dificultatea atribuită de pool minerului respectiv.
 Ping	Timpul de răspuns al serverului (măsurat în ms).
-6. Utilizare
+7. Utilizare
 Salvați codul într-un fișier cu extensia .html (ex: index.html).
 Deschideți fișierul în orice browser modern (Chrome, Firefox, Edge).
 Introduceți Username-ul DUCO în câmpul de text.
 Apăsați butonul Start.
-7. Note și Limitări
+8. Note și Limitări
 CORS: Aplicația rulează direct în browser. Dacă API-ul Duino-Coin impune restricții CORS (Cross-Origin Resource Sharing), ar putea fi necesar un proxy, deși serverele DUCO permit de regulă cererile de tip fetch.
 Stocare: Balanța precedentă este stocată în memorie (prevBalance) pentru a calcula diferența la refresh, dar se pierde dacă pagina este reîncărcată manual (F5).
 
