@@ -10,6 +10,7 @@ If you like this and would like to donate some DUCO to him, his wallet username 
 
 
 # În limba Română:
+Aceasta este documentația tehnică pentru DUCO Miner Dashboard, un instrument minimalist bazat pe web, utilizat pentru monitorizarea în timp real a activității de minat pe platforma Duino-Coin (DUCO).
 1. Prezentare Generală
 Codul furnizat este o aplicație Single-Page (SPA) construită în HTML5, CSS3 și JavaScript (Vanilla JS). Acesta interfațează cu API-ul public Duino-Coin pentru a afișa statistici despre balanță, starea minerilor și performanța rețelei.
 3. Caracteristici Principale
