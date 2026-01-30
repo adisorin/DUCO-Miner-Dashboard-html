@@ -10,42 +10,43 @@ If you like this and would like to donate some DUCO to him, his wallet username 
 
 
 # În limba Română:
-Aceasta este documentația tehnică pentru DUCO Miner Dashboard, un instrument minimalist bazat pe web, utilizat pentru monitorizarea în timp real a activității de minat pe platforma Duino-Coin (DUCO).
+Iată documentația tehnică pentru DUCO Miner Dashboard, tradusă și adaptată în limba română:
+Documentație Tehnică: DUCO Miner Dashboard
+Acesta este manualul tehnic pentru DUCO Miner Dashboard, un instrument web minimalist utilizat pentru monitorizarea în timp real a activității de minerit pe platforma Duino-Coin (DUCO).
 1. Prezentare Generală
-Codul furnizat este o aplicație Single-Page (SPA) construită în HTML5, CSS3 și JavaScript (Vanilla JS). Acesta interfațează cu API-ul public Duino-Coin pentru a afișa statistici despre balanță, starea minerilor și performanța rețelei.
-3. Caracteristici Principale
-4. Monitorizare în timp real: Actualizare automată la fiecare 60 de secunde.
-Sumar Cont: Afișează balanța totală, numărul de mineri activi, uptime-ul sesiunii și scorul de încredere (Trust Score).
-Detalii Mineri: Tabel detaliat cu ID-ul fiecărui dispozitiv, software-ul folosit, algoritmul, rata de acceptare a share-urilor, hashrate și latență (ping).
-Interfață Dark Mode: Design optimizat pentru lizibilitate, folosind fonturi monospace și coduri de culori pentru alerte.
- 
-5. Structură Tehnică
-A. Stilul Vizual (CSS)
-Aplicația utilizează o temă întunecată (#111) cu accente de culori funcționale:
-Verde: Valori pozitive, succes, latență mică.
-Roșu: Erori, share-uri respinse, latență mare.
+Codul furnizat reprezintă o aplicație de tip Single-Page (SPA), construită utilizând HTML5, CSS3 și JavaScript (Vanilla JS). Aceasta interacționează cu API-ul public Duino-Coin pentru a afișa statistici despre balanță, starea minerilor și performanța rețelei.
+2. Caracteristici Cheie
+Monitorizare în timp real: Actualizare automată a datelor la fiecare 60 de secunde.
+Sumar Cont: Afișează balanța totală, numărul de mineri activi, timpul de funcționare a sesiunii (uptime) și scorul de încredere (Trust Score).
+Detalii Mineri: Un tabel detaliat care include ID-ul dispozitivului, software-ul utilizat, algoritmul, rata de succes a share-urilor, hashrate-ul și latența (ping).
+Interfață Dark Mode: Design optimizat pentru lizibilitate, utilizând fonturi monospace și alerte codificate prin culori.
+3. Structură Tehnică
+A. Stil Vizual (CSS)
+Aplicația utilizează o temă întunecată (#111) cu accente cromatice funcționale:
+Verde: Valori pozitive, succes, latență scăzută.
+Roșu: Erori, share-uri respinse, latență ridicată.
 Cyan: Date tehnice (Hashrate).
-Violet: Identitate (Username).
-B. Funcții JavaScript (Logic)
-fetchData(): Funcția principală asincronă care interoghează REST API-ul Duino-Coin.
-formatHashrate(hr): Convertește valoarea brută din H/s în unități mai mari (kH/s, mH/s) pentru lizibilitate.
-sec2hms(sec): Calculează timpul de rulare al dashboard-ului în format HH:MM:SS.
-startCountdown(): Gestionează cronometrul de reîmprospătare și declanșează noua cerere de date.
-6. Parametrii Monitorizați în Tabel
+Violet: Identitate (Nume utilizator).
+B. Funcții JavaScript (Logică)
+fetchData(): Funcția asincronă principală care interoghează REST API-ul Duino-Coin.
+formatHashrate(hr): Convertește valorile brute H/s în unități mai mari (kH/s, MH/s) pentru o mai bună lizibilitate.
+sec2hms(sec): Calculează timpul de rulare al tabloului de bord în format HH:MM:SS.
+startCountdown(): Gestionează cronometrul de reîmprospătare și declanșează noile cereri de date.
+4. Parametri Monitorizați (Tabel)
 Coloană	Descriere
-ID	Identificatorul setat în configurarea minerului.
+ID	Identificatorul setat în configurația minerului.
 Success	Raportul dintre share-urile acceptate și totalul procesat.
 Hashrate	Viteza de calcul a dispozitivului.
 Diff	Dificultatea atribuită de pool minerului respectiv.
 Ping	Timpul de răspuns al serverului (măsurat în ms).
-7. Utilizare
+5. Mod de Utilizare
 Salvați codul într-un fișier cu extensia .html (ex: index.html).
 Deschideți fișierul în orice browser modern (Chrome, Firefox, Edge).
-Introduceți Username-ul DUCO în câmpul de text.
+Introduceți Numele de utilizator DUCO în câmpul de text.
 Apăsați butonul Start.
-8. Note și Limitări
+6. Note și Limitări
 CORS: Aplicația rulează direct în browser. Dacă API-ul Duino-Coin impune restricții CORS (Cross-Origin Resource Sharing), ar putea fi necesar un proxy, deși serverele DUCO permit de regulă cererile de tip fetch.
-Stocare: Balanța precedentă este stocată în memorie (prevBalance) pentru a calcula diferența la refresh, dar se pierde dacă pagina este reîncărcată manual (F5).
+Stocare: Balanța anterioară este stocată în memorie (prevBalance) pentru a calcula diferența la refresh, însă aceste date se pierd dacă pagina este reîncărcată manual (F5).
 
 # In English:
 This is the technical documentation for the DUCO Miner Dashboard, a minimalist web-based tool used for real-time monitoring of mining activity on the Duino-Coin (DUCO) platform.
