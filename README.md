@@ -8,6 +8,8 @@ If you like this and would like to donate some DUCO to him, his wallet username 
 
 <img width="1203" height="793" alt="image" src="https://github.com/user-attachments/assets/8505c3e5-5818-4d6e-b748-35b7bc005ef0" />
 
+
+# În limba Română:
 1. Prezentare Generală
 Codul furnizat este o aplicație Single-Page (SPA) construită în HTML5, CSS3 și JavaScript (Vanilla JS). Acesta interfațează cu API-ul public Duino-Coin pentru a afișa statistici despre balanță, starea minerilor și performanța rețelei.
 2. Caracteristici Principale
@@ -42,3 +44,40 @@ Apăsați butonul Start.
 6. Note și Limitări
 CORS: Aplicația rulează direct în browser. Dacă API-ul Duino-Coin impune restricții CORS (Cross-Origin Resource Sharing), ar putea fi necesar un proxy, deși serverele DUCO permit de regulă cererile de tip fetch.
 Stocare: Balanța precedentă este stocată în memorie (prevBalance) pentru a calcula diferența la refresh, dar se pierde dacă pagina este reîncărcată manual (F5).
+
+# In English:
+This is the technical documentation for the DUCO Miner Dashboard, a minimalist web-based tool used for real-time monitoring of mining activity on the Duino-Coin (DUCO) platform.
+1. General Overview
+The provided code is a Single-Page Application (SPA) built using HTML5, CSS3, and JavaScript (Vanilla JS). It interfaces with the public Duino-Coin API to display statistics regarding balance, miner status, and network performance.
+2. Key Features
+Real-time Monitoring: Automatic updates every 60 seconds.
+Account Summary: Displays total balance, active miner count, session uptime, and Trust Score.
+Miner Details: A detailed table featuring device IDs, software used, algorithm, share acceptance rate, hashrate, and latency (ping).
+Dark Mode Interface: Design optimized for readability, utilizing monospace fonts and color-coded alerts.
+3. Technical Structure
+A. Visual Styling (CSS)
+The application uses a dark theme (#111) with functional accent colors:
+Green: Positive values, success, low latency.
+Red: Errors, rejected shares, high latency.
+Cyan: Technical data (Hashrate).
+Purple: Identity (Username).
+B. JavaScript Functions (Logic)
+fetchData(): The primary asynchronous function that queries the Duino-Coin REST API.
+formatHashrate(hr): Converts raw H/s values into larger units (kH/s, MH/s) for better readability.
+sec2hms(sec): Calculates the dashboard runtime in HH:MM:SS format.
+startCountdown(): Manages the refresh timer and triggers new data requests.
+4. Monitored Parameters (Table)
+Column	Description
+ID	The identifier set in the miner's configuration.
+Success	The ratio of accepted shares to the total processed.
+Hashrate	The device's calculation speed.
+Diff	The difficulty assigned by the pool to that specific miner.
+Ping	Server response time (measured in ms).
+5. Usage
+Save the code into a file with the .html extension (e.g., index.html).
+Open the file in any modern browser (Chrome, Firefox, Edge).
+Enter your DUCO Username in the text field.
+Press the Start button.
+6. Notes and Limitations
+CORS: The application runs directly in the browser. If the Duino-Coin API enforces CORS (Cross-Origin Resource Sharing) restrictions, a proxy might be required, though DUCO servers typically allow fetch requests.
+Storage: The previous balance is stored in memory (prevBalance) to calculate the difference upon refresh, but this data is lost if the page is manually reloaded (F5).
