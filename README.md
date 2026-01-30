@@ -10,17 +10,13 @@ If you like this and would like to donate some DUCO to him, his wallet username 
 
 
 # În limba Română:
-# 1. Prezentare Generală
+1. Prezentare Generală
 Codul furnizat este o aplicație Single-Page (SPA) construită în HTML5, CSS3 și JavaScript (Vanilla JS). Acesta interfațează cu API-ul public Duino-Coin pentru a afișa statistici despre balanță, starea minerilor și performanța rețelei.
-# 2. Caracteristici Principale
-# 3. Monitorizare în timp real:
- Actualizare automată la fiecare 60 de secunde.
-# Sumar Cont: 
- Afișează balanța totală, numărul de mineri activi, uptime-ul sesiunii și scorul de încredere (Trust Score).
-# Detalii Mineri: 
- Tabel detaliat cu ID-ul fiecărui dispozitiv, software-ul folosit, algoritmul, rata de acceptare a share-urilor, hashrate și latență (ping).
-# Interfață Dark Mode: 
- Design optimizat pentru lizibilitate, folosind fonturi monospace și coduri de culori pentru alerte.
+2. Caracteristici Principale
+3. Monitorizare în timp real: Actualizare automată la fiecare 60 de secunde.
+Sumar Cont: Afișează balanța totală, numărul de mineri activi, uptime-ul sesiunii și scorul de încredere (Trust Score).
+Detalii Mineri: Tabel detaliat cu ID-ul fiecărui dispozitiv, software-ul folosit, algoritmul, rata de acceptare a share-urilor, hashrate și latență (ping).
+Interfață Dark Mode: Design optimizat pentru lizibilitate, folosind fonturi monospace și coduri de culori pentru alerte.
  
 4. Structură Tehnică
 A. Stilul Vizual (CSS)
