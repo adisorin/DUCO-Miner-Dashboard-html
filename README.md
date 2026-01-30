@@ -10,7 +10,6 @@ If you like this and would like to donate some DUCO to him, his wallet username 
 
 
 # În limba Română:
-Iată documentația tehnică pentru DUCO Miner Dashboard, tradusă și adaptată în limba română:
 Documentație Tehnică: DUCO Miner Dashboard
 Acesta este manualul tehnic pentru DUCO Miner Dashboard, un instrument web minimalist utilizat pentru monitorizarea în timp real a activității de minerit pe platforma Duino-Coin (DUCO).
 1. Prezentare Generală
