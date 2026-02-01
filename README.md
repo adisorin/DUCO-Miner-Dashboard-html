@@ -10,6 +10,9 @@ And if anyone wants to donate to me too, my wallet address is "my_cool_adis", th
 
 <img width="1203" height="793" alt="image" src="https://github.com/user-attachments/assets/8505c3e5-5818-4d6e-b748-35b7bc005ef0" />
 
+# DUCO-monitor-html-v2
+<img width="1254" height="758" alt="image" src="https://github.com/user-attachments/assets/8490733e-7b32-4a98-ae71-385519855d09" />
+
 
 # În limba Română:
 Documentație Tehnică: DUCO Miner Dashboard
