@@ -3,6 +3,8 @@ This project is based on Python code taken from https://github.com/jpx13/duco-mi
 Thanks to dansinclair25 for his initial work, the creator of the code.
 If you like this and would like to donate some DUCO to him, his wallet username is `dansinclair25`, if you want to give some ducos to me, my wallet name is 'discopepereland'
 
+And if anyone wants to donate to me too, my wallet address is "my_cool_adis", thank you.
+
 <img width="1202" height="800" alt="image" src="https://github.com/user-attachments/assets/b50d5195-9d71-4c38-bfcb-85cdf8f06e2c" />
 
 
