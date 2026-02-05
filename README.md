@@ -52,6 +52,12 @@ Apăsați butonul Start.
 CORS: Aplicația rulează direct în browser. Dacă API-ul Duino-Coin impune restricții CORS (Cross-Origin Resource Sharing), ar putea fi necesar un proxy, deși serverele DUCO permit de regulă cererile de tip fetch.
 Stocare: Balanța anterioară este stocată în memorie (prevBalance) pentru a calcula diferența la refresh, însă aceste date se pierd dacă pagina este reîncărcată manual (F5).
 
+# Vă rugăm să rețineți
+Pentru monitorizarea personală: O interogare la fiecare 30–60 de secunde este considerată ideală. Aceasta oferă date actualizate fără a suprasolicita inutil serverele proiectului.
+Frecvența maximă sigură: Evitați să efectuați mai mult de o solicitare la fiecare 5–10 secunde. Solicitările mai frecvente pot fi interpretate ca un atac de tip spam sau bot.
+Recomandare: Recomand setarea timpului de reîmprospătare a panoului de control (dashboard) la 120.000 de milisecunde (2 minute).
+Important: NU deschideți aplicația pe mai multe dispozitive simultan, deoarece acest lucru declanșează un conflict Cloudflare: „Too many requests” (Prea multe solicitări).
+
 # In English:
 This is the technical documentation for the DUCO Miner Dashboard, a minimalist web-based tool used for real-time monitoring of mining activity on the Duino-Coin (DUCO) platform.
 1. General Overview
@@ -88,3 +94,9 @@ Press the Start button.
 6. Notes and Limitations
 CORS: The application runs directly in the browser. If the Duino-Coin API enforces CORS (Cross-Origin Resource Sharing) restrictions, a proxy might be required, though DUCO servers typically allow fetch requests.
 Storage: The previous balance is stored in memory (prevBalance) to calculate the difference upon refresh, but this data is lost if the page is manually reloaded (F5).
+
+# Please Note
+For personal monitoring: One query every 30–60 seconds is considered ideal. This provides up-to-date data without unnecessarily taxing the project's servers.
+Maximum safe frequency: Avoid making more than one request every 5–10 seconds. More frequent requests may be interpreted as a spam or bot attack.
+Recommendation: I recommend setting the dashboard refresh time to 120,000 milliseconds (2 minutes).
+Important: DO NOT open the application on multiple devices simultaneously, as this triggers a Cloudflare conflict: "Too many requests."
