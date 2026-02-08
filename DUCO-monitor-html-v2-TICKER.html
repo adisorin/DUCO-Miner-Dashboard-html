@@ -234,9 +234,9 @@ function formatHashrate(hr) {
 }
 
 function sec2hms(sec) {
-    let h = Math.floor(sec / 3600)
-    let m = Math.floor((sec % 3600) / 60)
-    let s = Math.floor(sec % 60)
+    let h = Math.floor(sec / 3600).toString().padStart(2, '0')
+    let m = Math.floor((sec % 3600) / 60).toString().padStart(2, '0')
+    let s = Math.floor(sec % 60).toString().padStart(2, '0')
     return `${h}:${m}:${s}`
 }
 
@@ -418,5 +418,6 @@ function start() {
 
 </body>
 </html>
+
 
 
