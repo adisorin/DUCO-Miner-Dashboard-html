@@ -14,7 +14,8 @@ And if anyone wants to donate to me too, my wallet address is "my_cool_adis", th
 <img width="1254" height="758" alt="image" src="https://github.com/user-attachments/assets/8490733e-7b32-4a98-ae71-385519855d09" />
 
 # DUCO-monitor-html-v2-TICKER
-<img width="1169" height="875" alt="image" src="https://github.com/user-attachments/assets/afd77ebb-68b2-4409-8fa2-6eee4c93c0ab" />
+<img width="1170" height="875" alt="image" src="https://github.com/user-attachments/assets/8e4d1a4e-2687-481b-93ea-2974355eaa8b" />
+
 
 
 # În limba Română:
