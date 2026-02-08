@@ -149,7 +149,7 @@ async function fetchData() {
         const secondsElapsed = (Date.now() - startTime) / 1000
 		let daily_average = 0
 		if (secondsElapsed > 60) {
-			let balanceGained = balance - initialBalance
+			const balanceGained = balance - initialBalance
 			daily_average = (balanceGained / secondsElapsed) * 86400
 		} else {
 			daily_average = result.balance.daily_estimate || 0
@@ -284,3 +284,4 @@ function start() {
 
 </body>
 </html>
+
