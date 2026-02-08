@@ -311,7 +311,15 @@ async function fetchData() {
 			daily_average = result.balance.daily_estimate || 0
 		}
 
-        let tableHTML = `<table><tr><th>Device ID</th><th>Software</th><th>Algo</th><th>Success</th><th>Rejected</th><th>Hashrate</th><th>Pool</th><th>Diff</th><th>Ping</th></tr>`
+        let tableHTML = `<table><tr><th>Device ID</th>
+		<th>Software</th>
+		<th>Algo</th>
+		<th>Success</th>
+		<th>Rejected</th>
+		<th>Hashrate</th>
+		<th>Pool</th>
+		<th>Diff</th>
+		<th>Ping</th></tr>`
 
         miners.forEach(m => {
             const hashrate = parseInt(m.hashrate || 0);
@@ -327,7 +335,16 @@ async function fetchData() {
             totalAccepted += accepted;
             totalSharerate += sharerate;
 
-            tableHTML += `<tr><td class="blue">${m.identifier}</td><td class="orange">${m.software}</td><td>${m.algorithm}</td><td class="green">${accepted}/${sharerate}</td><td class="${rejected > 0 ? 'red' : 'green'}">${rejected}</td><td class="cyan">${formatHashrate(hashrate)}</td><td>${m.pool}</td><td>${m.diff}</td><td class="${parseInt(m.pg||0) <= 40 ? 'green' : 'red'}">${m.pg||0}</td></tr>`
+            tableHTML += `<tr><td class="blue">${m.identifier}</td>
+			<td class="orange">${m.software}</td>
+			<td>${m.algorithm}</td>
+			<td class="green">${accepted}/${sharerate}</td>
+			<td class="${rejected > 0 ? 'red' : 'green'}">${rejected}</td>
+			<td class="cyan">${formatHashrate(hashrate)}</td>
+			<td>${m.pool}</td>
+			<td>${m.diff}</td>
+			<td class="${parseInt(m.pg||0) <= 40 ? 'green' : 'red'}">${m.pg||0}</td>
+			</tr>`
         })
         tableHTML += "</table>"
 
@@ -335,17 +352,28 @@ async function fetchData() {
 
         document.getElementById("summary").innerHTML = `
         <table>
-            <tr><th>Username</th><th>Balance</th><th>Daily Avg</th><th>Miners</th><th>Total Hashrate</th><th>Uptime</th><th>Verified</th><th>Last Transaction</th></tr>
             <tr>
-                <td class="purple">${username}</td>
-                <td class="green">${balance.toFixed(4)} DUCO<br><small class="yellow">$${balanceUSD}</small></td>
-                <td class="green">${daily_average.toFixed(2)} DUCO</td>
-                <td>${miners.length}</td>
-                <td class="cyan">${formatHashrate(totalHash)}</td>
-                <td>${sec2hms(secondsElapsed)}</td>
-                <td class="${verified === 'yes' ? 'green' : 'red'}">${verified} (Trust: ${trustScore})</td>
-                <td>${txHTML}</td>
+			<th>Username</th>
+			<th>Balance</th>
+			<th>Daily Avg</th>
+			<th>Miners</th>
+			<th>Total Hashrate</th>
+			<th>Uptime</th>
+			<th>Verified</th>
+			<th>Last Transaction</th>
+			</tr>
+			
+            <tr>
+            <td class="purple">${username}</td>
+            <td class="green">${balance.toFixed(4)} DUCO<br><small class="yellow">$${balanceUSD}</small></td>
+            <td class="green">${daily_average.toFixed(2)} DUCO</td>
+            <td>${miners.length}</td>
+            <td class="cyan">${formatHashrate(totalHash)}</td>
+            <td>${sec2hms(secondsElapsed)}</td>
+            <td class="${verified === 'yes' ? 'green' : 'red'}">${verified} (Trust: ${trustScore})</td>
+			<td>${txHTML}</td>
             </tr>
+			
         </table>`;
 
         document.getElementById("miners").innerHTML = tableHTML;
@@ -390,4 +418,5 @@ function start() {
 
 </body>
 </html>
+
 
